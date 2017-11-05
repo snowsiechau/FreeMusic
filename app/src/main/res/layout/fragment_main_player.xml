@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="gloryhunter.freemusic.fragment.MainPlayerFragment"
+    android:clickable="true"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back_black_24dp"
+        android:padding="@dimen/text_margin"
+        android:id="@+id/iv_back"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_file_download_black_24dp"
+        android:padding="@dimen/text_margin"
+        android:id="@+id/iv_dowload"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wasama"
+        android:layout_toEndOf="@+id/iv_back"
+        android:layout_marginTop="@dimen/text_margin"
+        android:layout_marginLeft="@dimen/text_margin"
+        android:textSize="20sp"
+        android:textColor="#ffff"
+        android:id="@+id/tv_song_name"
+        android:layout_toLeftOf="@id/iv_dowload"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dinamasa"
+        android:textColor="#bbffffff"
+        android:textSize="@dimen/text_margin"
+        android:layout_below="@id/tv_song_name"
+        android:layout_toEndOf="@+id/iv_back"
+        android:layout_marginLeft="@dimen/text_margin"
+        android:id="@+id/tv_artist_name"
+        />
+
+    <ImageView
+        android:id="@+id/iv_song"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_above="@+id/iv_preview"
+        android:layout_marginBottom="14dp"
+        android:layout_toEndOf="@+id/tv_current_time"
+        android:src="@drawable/cust_imageview_gradient" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:layout_below="@id/iv_song"
+        android:textColor="#ffff"
+        android:textSize="@dimen/text_margin"
+        android:layout_marginLeft="@dimen/text_margin"
+        android:layout_marginTop="30dp"
+        android:id="@+id/tv_current_time"
+        />
+
+    <SeekBar
+        android:id="@+id/sb_song"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_current_time"
+        android:layout_alignStart="@+id/tv_artist_name"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="03:11"
+        android:layout_below="@id/iv_song"
+        android:layout_toEndOf="@id/sb_song"
+        android:layout_marginTop="30dp"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_margin"
+        android:layout_marginLeft="@dimen/text_margin"
+        android:id="@+id/tv_duration_time"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_skip_previous_black_24dp"
+        android:id="@+id/iv_preview"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="70dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_skip_next_black_24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="70dp"
+        android:id="@+id/iv_next"
+        />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sb_song"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_play_arrow_black_24dp"
+        app:fabSize="normal"
+        android:id="@+id/fa_play"
+        />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:indicatorName="BallClipRotatePulseIndicator"
+        android:id="@+id/av_downloading"
+        />
+
+</RelativeLayout>
